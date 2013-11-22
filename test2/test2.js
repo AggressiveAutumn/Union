@@ -5,7 +5,8 @@ if (Meteor.isClient) {
   Template.add_union.events({
     'click input.insert': function () {
       var new_u = document.getElementById('new_u').value;
-      Unions.insert({name: new_u, attendees: []});
+      var u_time = document.getElementById('u_time').value;
+      Unions.insert({name: new_u, time: u_time, attendees: []});
     }
   });
 
@@ -45,7 +46,7 @@ if (Meteor.isServer) {
                    "Basketball",
                    "Ultimate"];
       for (var i = 0; i < names.length; i++)
-        Unions.insert({name: names[i], attendees: []});
+        Unions.insert({name: names[i], time: attendees: []});
     }
   });
 }
