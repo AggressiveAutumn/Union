@@ -42,6 +42,7 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     Unions.remove({});
+
     // if (Unions.find().count() === 0) {
     //   var names = ["Dinners",
     //                "Basketball",

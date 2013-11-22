@@ -12,15 +12,17 @@ h1 {
 
 .union .attendees{
     display: inline-block;
-    width: 300px;
-    text-align: right;
-    font-size: 1.75em;
+    width: 400px;
+    float: center;
+    font-size: 1.0em;
+    word-wrap: break-word;
 }
 
 .union .date{
     display: inline-block;
     text-align: left;
     font-size: 1.75em;
+    padding-right: 50px;
 }
 
 .union .time{
@@ -30,16 +32,32 @@ h1 {
 }
 
 .union {
+    width: 75%;
+    margin: 0 auto;
     border: 2px solid;
     border-radius: 20px;
     padding: 20px;
 
 }
 
+.details {
+    font-size: 2.0em;
+    padding: 10px;
+    text-align: center;
+}
+
+.none {
+    float: center;
+    font-size: 2.0em;
+    padding: 10px;
+    text-align: center;
+}
+
 .add_union {
     text-align: center;
     padding: 10px;
     font-size: 2em;
+    text-align: center;
 }
 
 .union.selected{
