@@ -11,7 +11,7 @@ if (Meteor.isClient) {
   });
 
   Template.union_list.unions = function () {
-    return Unions.find({}, {sort: {name: 1, attendees: 1}});
+    return Unions.find({}, {sort: {time: 1}});
   };
 
   Template.union_list.selected_union = function () {
@@ -41,12 +41,12 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     Unions.remove({});
-    if (Unions.find().count() === 0) {
-      var names = ["Dinners",
-                   "Basketball",
-                   "Ultimate"];
-      for (var i = 0; i < names.length; i++)
-        Unions.insert({name: names[i], time: attendees: []});
-    }
+    // if (Unions.find().count() === 0) {
+    //   var names = ["Dinners",
+    //                "Basketball",
+    //                "Ultimate"];
+    //   for (var i = 0; i < names.length; i++)
+    //     Unions.insert({name: names[i], time: , attendees: []});
+    // }
   });
 }
