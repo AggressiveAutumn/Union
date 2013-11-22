@@ -16,7 +16,8 @@ if (Meteor.isClient) {
 
   Template.union_list.events({
     'click input.push': function () {
-      Unions.update(Session.get("selected_union"), {$push: {attendees: " Aakash"}});
+      var user = document.getElementById('user').value;
+      Unions.update(Session.get("selected_union"), {$push: {attendees: user}});
     }
   });
 
@@ -36,7 +37,7 @@ if (Meteor.isServer) {
                    "Basketball",
                    "Ultimate"];
       for (var i = 0; i < names.length; i++)
-        Unions.insert({name: names[i], attendees: ["JD", " David"]});
+        Unions.insert({name: names[i], attendees: []});
     }
   });
 }
