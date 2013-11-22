@@ -1,6 +1,6 @@
 .union .name {
     display: inline-block;
-    width: 300px;
+    width: 100px;
     text-align: left;
     font-size: 1.75em;
 }
@@ -12,9 +12,23 @@
     font-size: 1.75em;
 }
 
+.union .date{
+    display: inline-block;
+    text-align: left;
+    font-size: 1.75em;
+}
+
+.union .time{
+    display: inline-block;
+    text-align: left;
+    font-size: 1.75em;
+}
+
 .union {
     border: 2px solid;
+    border-radius: 20px;
     padding: 20px;
+
 }
 
 .add_union {
@@ -25,4 +39,5 @@
 
 .union.selected{
     background-color: #CEE3F6;
+    font-weight: bolder;
 }
