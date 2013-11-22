@@ -22,3 +22,7 @@
     padding: 10px;
     font-size: 2em;
 }
+
+.union.selected{
+    background-color: #CEE3F6;
+}
