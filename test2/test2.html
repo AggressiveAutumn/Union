@@ -1,0 +1,37 @@
+<head>
+  <title>Union_list</title>
+</head>
+
+<body>
+  <div id="outer">
+    {{> union_list}}
+  </div>
+</body>
+
+<template name="union_list">
+  <div class="union_list">
+    {{#each unions}}
+      {{> union}}
+    {{/each}}
+  </div>
+
+  {{#if selected_union}}
+  <div class="details">
+    <div class="name">{{selected_union}}</div>
+    <input type="button" class="push" value="New Attendee" />
+  </div>
+  {{/if}}
+
+  {{#unless selected_union}}
+  <div class="none">Click a union to select</div>
+  {{/unless}}
+
+</template>
+
+<template name="union">
+  <div class="union">
+    <span class="name">{{name}}</span>
+    <span class="attendees"> {{attendees}}</span>
+  </div>
+</template>
+
