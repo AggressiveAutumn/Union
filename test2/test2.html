@@ -34,15 +34,17 @@
 <template name="union">
   <div class="union {{selected}}">
     <span class="name">{{name}}</span>
-    <span class="time">{{time}}</span>
+    at: <span class="time">{{time}}</span>
+    on: <span class="date">{{date}}</span>
     <span class="attendees"> {{attendees}}</span>
   </div>
 </template>
 
 <template name = "add_union">
   <div class = "add_union">
-    New Event: <input name = "new_union" id = "new_u" type = "text"/>
-    Event Time: <input type = "datetime-local" name = "new_union_time" id = "u_time"/>
+    New Union: <input name = "new_union" id = "new_u" type = "text"/>
+    Union Time: <input type = "date" name = "new_union_date" id = "u_date"/>
+    <input type = "time" name = "new_union_time" id = "u_time"/>
     <input type = "button" class = "insert" value = "Submit" />
   </div>
 </template>

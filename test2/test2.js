@@ -4,14 +4,15 @@ if (Meteor.isClient) {
 
   Template.add_union.events({
     'click input.insert': function () {
-      var new_u = document.getElementById('new_u').value;
-      var u_time = document.getElementById('u_time').value;
-      Unions.insert({name: new_u, time: u_time, attendees: []});
+      var new_u   = document.getElementById('new_u').value;
+      var u_time  = document.getElementById('u_time').value;
+      var u_date  = document.getElementById('u_date').value;
+      Unions.insert({name: new_u, time: u_time, date: u_date, attendees: []});
     }
   });
 
   Template.union_list.unions = function () {
-    return Unions.find({}, {sort: {time: 1}});
+    return Unions.find({}, {sort: {date: 1, time: 1}});
   };
 
   Template.union_list.selected_union = function () {
