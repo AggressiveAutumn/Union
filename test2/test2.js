@@ -1,6 +1,14 @@
 Unions = new Meteor.Collection("unions");
 
 if (Meteor.isClient) {
+
+  Template.add_union.events({
+    'click input.insert': function () {
+      var new_u = document.getElementById('new_u').value;
+      Unions.insert({name: new_u, attendees: []});
+    }
+  });
+
   Template.union_list.unions = function () {
     return Unions.find({}, {sort: {name: 1, attendees: 1}});
   };

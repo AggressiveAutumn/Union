@@ -4,6 +4,8 @@
 
 <body>
   <div id="outer">
+    {{> add_union}}
+
     {{> union_list}}
   </div>
 </body>
@@ -36,3 +38,9 @@
   </div>
 </template>
 
+<template name = "add_union">
+  <div class = "add_union">
+    New Event: <input name = "new_union" id = "new_u" type = "text"/>
+    <input type = "button" class = "insert" value = "Submit" />
+  </div>
+</template>

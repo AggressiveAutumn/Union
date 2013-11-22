@@ -16,3 +16,9 @@
     border: 2px solid;
     padding: 20px;
 }
+
+.add_union {
+    text-align: center;
+    padding: 10px;
+    font-size: 2em;
+}
